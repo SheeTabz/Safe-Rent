@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* .hero{
+  background-image: url("https://images.unsplash.com/photo-1567569757170-6bfac087c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c3V2JTIwY2Fyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+
+} */
+
+.transBg{
+  background-color: rgba(0, 0 , 0, 0.5);
+  height:inherit;
+}
