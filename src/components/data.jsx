@@ -3,6 +3,25 @@ import  {AiOutlineCar, AiOutlineStar} from 'react-icons/ai'
 import {FiMonitor, FiAward} from 'react-icons/fi'
 import {Ri24HoursLine} from 'react-icons/ri'
 
+const navData = [
+    {
+        name: 'HOME',
+        path: '/'
+    },
+    {
+        name: 'ABOUT US',
+        path: '/about'
+    },
+    {
+        name: 'SERVICES',
+        path: '/services'
+    },
+    {
+        name: 'OUR CARS',
+        path: '/cars'
+    }
+]
+
 const services = [
     {
         name: 'Fixed Rates',
@@ -89,3 +108,4 @@ const cars = [
 
 export {services};
 export {cars};
+export {navData};
