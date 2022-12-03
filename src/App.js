@@ -1,13 +1,17 @@
 import './App.css';
-import Main from './components/LandingPage/Main';
 import NavBar from './components/NavBar';
+import PagesTemplate from './components/PagesTemplate';
+import CarsPage from './pages/CarsPage';
+import LandingPage from './pages/LandingPage';
+import LogInPage from './pages/LogInPage';
 
 function App() {
   return (
     <div className="App">
   <NavBar/>
-  <Main/>
- 
+  {/* <LandingPage/> */}
+  <LogInPage/>
+{/* <CarsPage/> */}
     </div>
   );
 }
