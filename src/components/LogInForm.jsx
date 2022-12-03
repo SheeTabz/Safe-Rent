@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import FormTemplate from './FormTemplate'
 
+function LogInForm({onClick, handleUser}) {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -15,6 +17,7 @@ import FormTemplate from './FormTemplate'
       [name]: value,
     });
   }
+
 function handleSubmit(e){
   e.preventDefault();
 fetch('/login', {
@@ -34,6 +37,7 @@ fetch('/login', {
 })
 
 }
+
   return (
    <FormTemplate>
      <div className='border-solid border-2 drop-shadow-md h-full w-[500px] flex flex-col  justify-center items-center space-y-8'>
