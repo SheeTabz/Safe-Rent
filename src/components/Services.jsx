@@ -27,7 +27,7 @@ function Services() {
                 })}
         </div>
         </div>
-        <img src="http://wp.hostlin.com/zagreb/images/resource/services-img.png"/>
+        <img src="http://wp.hostlin.com/zagreb/images/resource/services-img.png" alt="Car"/>
     </div>
   )
 }
