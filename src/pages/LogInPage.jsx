@@ -3,16 +3,16 @@ import Footer from '../components/Footer'
 import LogInForm from '../components/LogInForm'
 import SignUpForm from '../components/SignUpForm'
 
-function LogInPage({setLogInPath}) {
+function LogInPage({handleUser}) {
     const [showLogin, setShowLogin] = useState(true);
     // if (showLogin) { setLogInPath('/login') }
     // else {  setLogInPath('/signup'); }
   return (
     <div>
         {showLogin ? (
- <LogInForm onClick={() => setShowLogin(false)}/>
+ <LogInForm onClick={() => setShowLogin(false)} handleUser={handleUser}/>
         ) : (
-<SignUpForm onClick={() => setShowLogin(true)}/>
+<SignUpForm onClick={() => setShowLogin(true)} handleUser={handleUser}/>
         )}
        
       
