@@ -2,8 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {navData} from './data'
 
-function NavBar({user}) {
-
+function NavBar({user, setUser}) {
+function handleLogout() {
+    fetch('/logout',{
+        method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(setUser(null))
+}
  
     if (user==null) {
  return (
@@ -49,9 +55,9 @@ function NavBar({user}) {
          </Link>
         </div> */}
      <div className='flex justify-center items-center space-x-5'>
-      <p className='text-2xl font-bold text-orange-500 border-b-2 border-slate-500'>{user}</p>
-         <Link to='/logout'>
-         <button className='text-slate-500 font-bold border-solid border-2 border-orange-600 px-4 py-2 rounded-2xl hover:bg-orange-600 hover:text-white'>Log out</button>
+      <p className='text-2xl font-bold text-orange-500 border-b-2 border-slate-500'>{user.username}</p>
+         <Link to='/'>
+         <button onClick={handleLogout} className='text-slate-500 font-bold border-solid border-2 border-orange-600 px-4 py-2 rounded-2xl hover:bg-orange-600 hover:text-white'>Log out</button>
          </Link>
      </div>
          </div>
