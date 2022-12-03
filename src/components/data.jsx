@@ -36,4 +36,56 @@ const services = [
     }
 ]
 
+const cars = [
+    {
+        image: 'http://wp.hostlin.com/zagreb/images/gallery/22.jpg',
+        name: 'Benz',
+        class: 'Luxury',
+        condition: 'Yes',
+        trans: 'Automatic',
+        price: '$29'
+    },
+    {
+        image: 'http://wp.hostlin.com/zagreb/images/gallery/22.jpg',
+        name: 'Benz',
+        class: 'Luxury',
+        condition: 'Yes',
+        trans: 'Automatic',
+        price: '$29'
+    },
+    {
+        image: 'http://wp.hostlin.com/zagreb/images/gallery/22.jpg',
+        name: 'Benz',
+        class: 'Luxury',
+        condition: 'Yes',
+        trans: 'Automatic',
+        price: '$29'
+    },
+    {
+        image: 'http://wp.hostlin.com/zagreb/images/gallery/22.jpg',
+        name: 'Benz',
+        class: 'Luxury',
+        condition: 'Yes',
+        trans: 'Automatic',
+        price: '$29'
+    },
+    {
+        image: 'http://wp.hostlin.com/zagreb/images/gallery/22.jpg',
+        name: 'Benz',
+        class: 'Luxury',
+        condition: 'Yes',
+        trans: 'Automatic',
+        price: '$29'
+    },
+    {
+        image: 'http://wp.hostlin.com/zagreb/images/gallery/22.jpg',
+        name: 'Benz',
+        class: 'Luxury',
+        condition: 'Yes',
+        trans: 'Automatic',
+        price: '$29'
+    }
+]
+
 export {services};
+export {cars};
