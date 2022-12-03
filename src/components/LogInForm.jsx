@@ -1,7 +1,15 @@
 import React from 'react'
 import FormTemplate from './FormTemplate'
 
-function LogInForm({onClick}) {
+  function handleChange(event) {
+    const name = event.target.name;
+    const value = event.target.value;
+  
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  }
   return (
    <FormTemplate>
      <div className='border-solid border-2 drop-shadow-md h-full w-[500px] flex flex-col  justify-center items-center space-y-8'>
