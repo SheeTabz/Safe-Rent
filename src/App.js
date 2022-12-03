@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar';
@@ -6,9 +7,15 @@ import LandingPage from './pages/LandingPage';
 import LogInPage from './pages/LogInPage';
 
 function App() {
+  const [user, setUser] = useState(null);
+const [logInPath, setLogInPath] = useState('/login')
+
+
+
+
   return (
     <div className="App">
-  <NavBar/>
+  <NavBar user={user}/>
   <Routes>
     <Route exact path='/' element={<LandingPage/>}/>
   <Route path='/login' element={<LogInPage/>} />
