@@ -10,6 +10,25 @@ import FormTemplate from './FormTemplate'
       [name]: value,
     });
   }
+function handleSubmit(e){
+  e.preventDefault();
+fetch('/login', {
+  method: 'POST',
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(formData)
+})
+.then(res => {
+  if(res.ok){
+    res.json().then(data => handleUser(data))
+  }
+  else{
+    res.json(err=> console.log(err.errors))
+  }
+})
+
+}
   return (
    <FormTemplate>
      <div className='border-solid border-2 drop-shadow-md h-full w-[500px] flex flex-col  justify-center items-center space-y-8'>
