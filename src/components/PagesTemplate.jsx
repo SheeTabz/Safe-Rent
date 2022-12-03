@@ -1,5 +1,6 @@
 import React from 'react'
 import {FaGreaterThan} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function PagesTemplate({pageData}) {
   return (
@@ -8,7 +9,9 @@ function PagesTemplate({pageData}) {
     <div className='revie relative flex flex-col justify-center items-center'>
       <h1 className="text-4xl font-bold ">{pageData}</h1>
       <div className='temp absolute  bottom-0 flex items-center space-x-3 p-4'>
+        <Link to='/'>
          <p>HOME</p>
+         </Link>
          <FaGreaterThan/>
          <p className='text-orange-500'>{pageData}</p>
       </div>
