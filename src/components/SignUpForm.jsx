@@ -1,7 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FormTemplate from './FormTemplate'
 
-function SignUpForm({onClick}) {
+function SignUpForm({onClick, handleUser}) {
+const [errors, SetErrors] = useState([])
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+    password_confirmation:""
+
+  })
+  function handleChange(event) {
+    const name = event.target.name;
+    const value = event.target.value;
+  
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  }
+
+function handleSubmit(e){
+  e.preventDefault();
+  fetch('/signup', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(res => {
+    if(res.ok){
+      res.json().then(user => handleUser(user));
+    }
+    else{
+      res.json().then( error => console.log(error.errors));
+    }
+  })
+
+Navigate("/")
+}
+
+
   return (
     <FormTemplate>
            <div className='border-solid border-2 drop-shadow-md h-full w-[500px] flex flex-col  justify-center items-center space-y-8'>
@@ -29,6 +68,7 @@ function SignUpForm({onClick}) {
          placeholder="Password confirmation"
          value={formData.password_confirmation}
          onChange={handleChange}/>
+
         <div className='flex space-x-2'>
         <input type= "checkbox" name="remember"/>
         <label for="remember">Remember me</label>
