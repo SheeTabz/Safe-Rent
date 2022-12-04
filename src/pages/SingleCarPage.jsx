@@ -1,3 +1,19 @@
+import React,{useState} from 'react'
+import { Link } from 'react-router-dom'
+import ColorButton from '../components/Buttons/ColorButton'
+import TransButton from '../components/Buttons/TransButton'
+import Footer from '../components/Footer'
+import PagesTemplate from '../components/PagesTemplate'
+import Reviews from '../components/Reviews'
+
+function SingleCarPage({data, user, errors}) {
+    const [visible,setVisible]=useState(false)
+    console.log(data)
+function handleReview(){
+    setVisible(!visible)
+    console.log(visible);
+    
+}
     if (user){
         return (
             <>
@@ -76,3 +92,6 @@
           )
     }
 
+}
+
+export default SingleCarPage
