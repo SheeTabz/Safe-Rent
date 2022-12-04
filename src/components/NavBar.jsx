@@ -11,7 +11,7 @@ function handleLogout() {
     .then(setUser(null))
 }
  
-    if (user==null) {
+    if (!user) {
  return (
     <div className='flex lg:flex-row mx-[90px] justify-between py-5 items-center'>
    <div >
