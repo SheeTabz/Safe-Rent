@@ -43,3 +43,14 @@
                         </div>
                     </div>
                 </div>
+
+                {
+                            visible ? (
+                                <div >
+                                <Reviews data={data}/>
+    
+                            </div>
+                            ) 
+                            : ""
+                        }
+
