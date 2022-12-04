@@ -1,22 +1,26 @@
 import { data } from 'autoprefixer'
 import React from 'react'
+import { Link, useParams } from 'react-router-dom'
 import CarCard from './CarCard'
-import {cars} from './data'
 
-function CarList() {
-  return (
+
+function CarList({cars ,onClick}) {
+const {id} = useParams()
+return (
     <div className='container m-auto mt-6 grid grid-cols-3 gap-y-3'>
         {cars.map((car,index)=>{
-            return <div className=' '>
+            return <Link to={`/cars/${car.id}`} onClick={()=> onClick(car.id)}>
+            <div className=' '>
              <CarCard
         type ={car.name}
-        level ={car.class}
-         condition={car.condition}
-          transition={car.trans}
-           clas={car.class}
+        level ={car.level}
+         condition={car.conditioning}
+          transition={car.transmision}
+           clas={car.level}
             price={car.price}
-            image={car.image}/>
+            image={car.image_url}/>
             </div>
+            </Link>
         })}
        
     </div>
