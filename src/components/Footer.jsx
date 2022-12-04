@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import {navData} from './data'
 
 function Footer() {
     const data = ["HOME","ABOUT US", "SERVICES", "OUR CARS"]
@@ -10,8 +12,11 @@ function Footer() {
    </div>
    <div >
     <ul className='flex  space-x-7'>
-        {data.map((header, index) => {
-            return <li className='hover:text-orange-600 text-slate-500 font-bold text-sm' key={index}>{header}</li>
+
+        {navData.map((header, index) => {
+            return <Link to={header.path} >
+            <li className='hover:text-orange-600 text-white font-bold text-sm' key={index}>{header.name}</li>
+            </Link>
         })}
     </ul>
    </div>
