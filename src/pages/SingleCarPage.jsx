@@ -54,3 +54,25 @@
                             : ""
                         }
 
+            </div>
+            <Footer/>
+            </>
+          )
+    }else{
+        return (
+            <>
+            <PagesTemplate pageData="OUR CARS"/>
+            <div className=' h-[50vh] flex flex-col justify-center items-center space-y-4' >
+              
+                        <h1 className='font-bold text-3xl'>No authorization found</h1>
+                        <p>This page is not publically available</p>
+                        <p>To access kindly log in first</p>
+                        <Link to='/login'>
+                        <button  className='button'>Sign in</button>
+                        </Link>  
+            </div>
+            <Footer/>
+            </>
+          )
+    }
+
