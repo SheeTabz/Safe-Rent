@@ -36,8 +36,6 @@ function handleSubmit(e){
       res.json().then( error => console.log(error.errors));
     }
   })
-
-Navigate("/")
 }
 
 
