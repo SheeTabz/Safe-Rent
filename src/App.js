@@ -17,7 +17,7 @@ const [logInPath, setLogInPath] = useState('/login')
 useEffect(()=> {
   fetch("/me")
   .then(res => {
-    if(res.ok){
+    if(res.ok && Object.keys(user).length > 0){
       res.json().then(user => setUser(user))
     }
     else{
