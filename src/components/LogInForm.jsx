@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import FormTemplate from './FormTemplate'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function LogInForm({onClick, handleUser}) {
 
@@ -30,18 +33,47 @@ fetch('/login', {
   body: JSON.stringify(formData)
 })
 .then(res => {
-  if(res.ok){
-    res.json().then(data => handleUser(data))
+  if(res.ok ){
+    res.json().then(data => 
+      {if(data.id){
+        handleUser(data)
+        toast.success('Login was succesful', {
+          position: "top-center",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+      }
+      else {
+      
+        toast.error('Invalid username or password!', {
+          position: "top-center",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+      }
+      }
+      )
   }
   else{
     res.json(err=> console.log(err.errors))
   }
 })
-
+setFormData("") 
 }
 
   return (
    <FormTemplate>
+        <ToastContainer />
      <div className='border-solid border-2 drop-shadow-md h-full w-[500px] flex flex-col  justify-center items-center space-y-8'>
         <h1 className="font-bold text-3xl">Welcome back</h1>
         <p className='text-slate-400'>Welcome back! Please enter your details</p>
