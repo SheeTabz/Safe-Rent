@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import FormTemplate from './FormTemplate'
 
 function LogInForm({onClick, handleUser}) {
+
+  
   const [formData, setFormData] = useState({
     username: "",
     password: "",
