@@ -8,7 +8,9 @@ function Footer() {
     <div className='mt-[150px]  bg-zinc-800'>
     <div className='mx-[100px] flex items-center py-7 justify-around' >
   <div >
-    <h1>Safe Rent</h1>
+  <Link to='/'>
+    <h1 className='font-serif italic text-3xl font-bold text-orange-500'>Safe Rent</h1>
+    </Link>
    </div>
    <div >
     <ul className='flex  space-x-7'>
