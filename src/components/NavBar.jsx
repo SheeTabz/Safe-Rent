@@ -15,7 +15,9 @@ function handleLogout() {
  return (
     <div className='flex lg:flex-row mx-[90px] justify-between py-5 items-center'>
    <div >
-    <h1>Safe Rent</h1>
+    <Link to='/'>
+    <h1 className='font-serif italic text-3xl font-extrabold text-orange-500'>Safe Rent</h1>
+    </Link>
    </div>
    <div >
     <ul className='flex flex-row space-x-7'>
