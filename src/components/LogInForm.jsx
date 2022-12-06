@@ -68,7 +68,6 @@ fetch('/login', {
     res.json(err=> console.log(err.errors))
   }
 })
-setFormData("") 
 }
 
   return (
