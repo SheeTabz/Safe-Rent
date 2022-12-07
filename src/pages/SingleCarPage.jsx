@@ -22,10 +22,10 @@ function handleReview(){
                 <div className='grid grid-cols-2  '>
                     <div  className='w-[600px] h-76 flex flex-col spce-x-4'>
                         <img className="w-full" src={data.image_url} alt="Car image"/>
-                        <div className='flex justify-around pt-6'>
-                        <TransButton onClick={handleReview}/>
-                        <TransButton/>
-                        <TransButton/>
+                        <div className='flex space-x-4 pt-6'>
+                        <TransButton data="Reviews" onClick={handleReview}/>
+                        <TransButton data="View information"/>
+                        {/* <TransButton data=""/> */}
                         </div>   
 
                     </div>
