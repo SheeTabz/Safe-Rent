@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import FormTemplate from './FormTemplate'
 
 function SignUpForm({onClick, handleUser}) {
-const [errors, SetErrors] = useState([])
+
   const [formData, setFormData] = useState({
     username: "",
     password: "",
