@@ -1,11 +1,35 @@
-# Getting Started with Create React App
+# SAFE RENT
+***
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Describtion
+This is a platform that enables users to be able to book or rent cars of their choice at affordable prices for their personal use.
 
-## Available Scripts
+
+## Site Demo
+Use the link provided to navigate to Safe Rent website .
+[Safe Rent](https://safe-rent.vercel.app//)<br>
+
+## Technologies used & Features
+- Well designed and responsive UI
+- React.js
+- CSS3
+- Tailwind css
+- API built by Ruby on Rails.
+
+## Future-implementations 
+- React animation libraries (framer motion animation libraries)
+
+## Contribution
+If you need to contribute to this project follow the steps below:<br>
+- Fork the repo first (`fork`)
+- Clone the repo(`git clone <repo link>`)
+- Create a branch where you will add changes (`git branch -b <branchname>`)
+- Add the changes (`git add .`)
+- Commit changes (`git commit -m"contributing changes"`)
+- Push your changes (`git push origin <branchname>`)
 
 In the project directory, you can run:
-
+**
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -14,57 +38,51 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## Code Samples
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```JavaScript
+import React from 'react'
+import { Link} from 'react-router-dom'
+import CarCard from './CarCard'
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+function CarList({cars ,onClick}) {
+return (
+    <div className='container m-auto mt-6 grid grid-cols-3 gap-y-3'>
+        {cars.map((car,index)=>{
+            return <Link to={`/cars/${car.id}`} onClick={()=> onClick(car.id)}>
+            <div className=' '>
+             <CarCard
+        type ={car.name}
+        level ={car.level}
+         condition={car.conditioning}
+          transition={car.transmision}
+           clas={car.level}
+            price={car.price}
+            image={car.image_url}/>
+            </div>
+            </Link>
+        })}
+       
+    </div>
+  )
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+export default CarList
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export default ServiceItem
+```
+## Backend repo
+This is the repository for the backend repositories. <br/>
+[Safe Rent Backend](https://github.com/SheeTabz/Safe-Rent-Backend)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Author
+### Name : [TABITHA MURIITHI](https://github.com/SheeTabz)
+### Contact Info :  [wmuriithitabitha@gmail.com](wmuriithitabitha@gmail.com)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License information.
+### MIT License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+`[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
