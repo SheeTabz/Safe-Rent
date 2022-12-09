@@ -9,6 +9,10 @@ This is a platform that enables users to be able to book or rent cars of their c
 Use the link provided to navigate to Safe Rent website .
 [Safe Rent](https://safe-rent.vercel.app//)<br>
 
+## Backend repo
+This is the repository for the backend that was used to build the Api. <br/>
+[Safe Rent Backend](https://github.com/SheeTabz/Safe-Rent-Backend)
+
 ## Technologies used & Features
 - Well designed and responsive UI
 - React.js
@@ -67,11 +71,6 @@ return (
 }
 export default CarList
 ```
-## Backend repo
-This is the repository for the backend repositories. <br/>
-[Safe Rent Backend](https://github.com/SheeTabz/Safe-Rent-Backend)
-
-
 ## Author
 ### Name : [TABITHA MURIITHI](https://github.com/SheeTabz)
 ### Contact Info :  [wmuriithitabitha@gmail.com](wmuriithitabitha@gmail.com)
