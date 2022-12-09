@@ -1,11 +1,10 @@
-import { data } from 'autoprefixer'
+
 import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import CarCard from './CarCard'
 
 
 function CarList({cars ,onClick}) {
-const {id} = useParams()
 return (
     <div className='container m-auto mt-6 grid grid-cols-3 gap-y-3'>
         {cars.map((car,index)=>{

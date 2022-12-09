@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar';
+import AboutPage from './pages/AboutPage';
 import CarsPage from './pages/CarsPage';
 import LandingPage from './pages/LandingPage';
 import LogInPage from './pages/LogInPage';
 import SingleCarPage from './pages/SingleCarPage';
+import ServicePage from './pages/ServicePage';
 
 function App() {
   const [user, setUser] = useState();
@@ -51,6 +53,8 @@ console.log(user)
   <Route path='/login' element={<LogInPage handleUser={handleUser}/>} />
   <Route path='/cars' element={<CarsPage handleOneCar={handleOneCar}/>} />
   <Route path='/cars/:id' element={<SingleCarPage data={singleData} user={user}  errors={errors}/>} />
+  <Route path='/about' element={<AboutPage/>} />
+  <Route path='/services' element={<ServicePage/>} />
 </Routes>
     </div>
   );
