@@ -45,7 +45,6 @@ import React from 'react'
 import { Link} from 'react-router-dom'
 import CarCard from './CarCard'
 
-
 function CarList({cars ,onClick}) {
 return (
     <div className='container m-auto mt-6 grid grid-cols-3 gap-y-3'>
@@ -62,15 +61,11 @@ return (
             image={car.image_url}/>
             </div>
             </Link>
-        })}
-       
+        })}  
     </div>
   )
 }
-
 export default CarList
-
-export default ServiceItem
 ```
 ## Backend repo
 This is the repository for the backend repositories. <br/>
