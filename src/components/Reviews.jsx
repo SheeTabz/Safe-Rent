@@ -1,12 +1,14 @@
 import React from 'react'
 import {GoPerson} from 'react-icons/go'
+import ReviewForm from './ReviewForm'
 
-function Reviews({data}) {
+function Reviews({data, reviews, setReview, user}) {
+  console.log(data)
   return (
     <div className='mt-8 flex flex-col space-y-3 '>
         <h1 className='font-bold text-xl pb-5 text-orange-500'>Reviews</h1>
-        {data.reviews.map(review => {
-          return <div className='flex space-x-6'>
+        {reviews.map(review => {
+          return <div className='flex items-center space-x-6'>
           <div className='text-3xl border-solid bg-slate-100 p-6 rounded-full hover:bg-orange-500 hover:animate-pulse text font-light'>
             <GoPerson/>
           </div>
@@ -16,7 +18,8 @@ function Reviews({data}) {
           </div>
           </div>
         })}
-
+        
+<ReviewForm setReview={setReview} user={user} data={data}/>
     </div>
   )
 }

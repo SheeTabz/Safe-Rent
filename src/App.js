@@ -10,16 +10,17 @@ import SingleCarPage from './pages/SingleCarPage';
 import ServicePage from './pages/ServicePage';
 
 function App() {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState({});
   const [singleData, setData] = useState({})
+  const [reviews, setReviews] = useState()
   const [ errors, setErrors] = useState()
-const [logInPath, setLogInPath] = useState('/login')
+
 
 
 useEffect(()=> {
   fetch("/me")
   .then(res => {
-    if(res.ok && Object.keys(user).length > 0){
+    if(res.ok && Object.keys(user).length > 0 ){
       res.json().then(user => setUser(user))
     }
     else{
@@ -28,11 +29,16 @@ useEffect(()=> {
   })
 },[])
 
+
+
 function handleOneCar(id){
   fetch(`/cars/${id}`)
   .then(res => {
     if(res.ok){
-      res.json().then(data => setData(data))
+      res.json().then(data => {
+        setData(data)
+        setReviews(data.reviews)
+      })
     }
     else {
       res.json().then(data => setErrors(data.errors))
@@ -52,7 +58,7 @@ console.log(user)
     <Route exact path='/' element={<LandingPage/>}/>
   <Route path='/login' element={<LogInPage handleUser={handleUser}/>} />
   <Route path='/cars' element={<CarsPage handleOneCar={handleOneCar}/>} />
-  <Route path='/cars/:id' element={<SingleCarPage data={singleData} user={user}  errors={errors}/>} />
+  <Route path='/cars/:id' element={<SingleCarPage data={singleData} user={user}  errors={errors} reviews={reviews} setReview={setReviews}/>} />
   <Route path='/about' element={<AboutPage/>} />
   <Route path='/services' element={<ServicePage/>} />
 </Routes>

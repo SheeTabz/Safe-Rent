@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import ColorButton from '../components/Buttons/ColorButton'
 import TransButton from '../components/Buttons/TransButton'
@@ -6,15 +6,18 @@ import Footer from '../components/Footer'
 import PagesTemplate from '../components/PagesTemplate'
 import Reviews from '../components/Reviews'
 
-function SingleCarPage({data, user, errors}) {
+function SingleCarPage({data, user, reviews, setReview}) {
     const [visible,setVisible]=useState(false)
     console.log(data)
+    // useEffect(() =>{
+    //     return data
+    //     },[])
 function handleReview(){
     setVisible(!visible)
     console.log(visible);
     
 }
-    if (user){
+    if (Object.keys(user).length > 0){
         return (
             <>
             <PagesTemplate pageData="OUR CARS"/>
@@ -63,7 +66,7 @@ function handleReview(){
                 {
                             visible ? (
                                 <div >
-                                <Reviews data={data}/>
+                                <Reviews reviews={reviews} setReview={setReview} user={user} data={data}/>
     
                             </div>
                             ) 
