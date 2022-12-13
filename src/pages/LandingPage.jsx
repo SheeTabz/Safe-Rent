@@ -13,7 +13,6 @@ function LandingPage() {
     <AboutUs/>
     <Services/>
     <OurCars/>
-  
     <Footer/>
     </div>
   )
