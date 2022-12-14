@@ -5,8 +5,6 @@ import SignUpForm from '../components/SignUpForm'
 
 function LogInPage({handleUser, user}) {
     const [showLogin, setShowLogin] = useState(true);
-    // if (showLogin) { setLogInPath('/login') }
-    // else {  setLogInPath('/signup'); }
   return (
     <div>
         {showLogin ? (
