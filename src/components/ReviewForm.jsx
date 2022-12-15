@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import {GoPerson} from 'react-icons/go'
 
-function ReviewForm({setReview, user, data}) {
+function ReviewForm({user, data}) {
 const[text, setText] = useState({
     text: '',
 })
