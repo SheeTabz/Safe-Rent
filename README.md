@@ -2,7 +2,7 @@
 ***
 
 ## Describtion
-This is a platform that enables users to be able to book or rent cars of their choice at affordable prices for their personal use for a period of their choice
+This is a platform that enables users to be able to book or rent cars of their choice at affordable prices for their personal use for a period of their choice.
 
 
 ## Site Demo
