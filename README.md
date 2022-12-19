@@ -6,7 +6,7 @@ This is a platform that enables users to be able to book or rent cars of their c
 
 
 ## Site Demo
-Use the link provided to navigate to Safe Rent website .
+Use the link provided to navigate to Safe Rent website for more details.
 [Safe Rent](https://safe-rent.vercel.app//)<br>
 
 ## Backend repo
